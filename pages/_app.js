@@ -1,4 +1,4 @@
-import { MyContextProvider } from './context/MyContext';
+import MyContextProvider from '@/context/MyContext';
 import '../styles/globals.css'; // Votre CSS global
 
 export default function MyApp({ Component, pageProps }) {

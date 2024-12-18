@@ -1,7 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import { useMyContext } from './context/MyContext';
-
+import { useMyContext } from '@/context/MyContext';
 export default function ProfilePage() {
   // Extraction des valeurs du contexte
   const { email, nom, url, occupation } = useMyContext();

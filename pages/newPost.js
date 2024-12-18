@@ -1,7 +1,7 @@
 'use client';
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useMyContext } from "./context/MyContext";
+import { useMyContext } from "@/context/MyContext";
 
 
 export default function NewPpost(){

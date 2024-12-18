@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 const MyContext = createContext();
 
-export const MyContextProvider = ({ children }) => {
+const MyContextProvider = ({ children }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [nom, setNom] = useState("");
@@ -74,5 +74,7 @@ export const MyContextProvider = ({ children }) => {
     </MyContext.Provider>
   );
 };
+
+export default MyContextProvider;
 
 export const useMyContext = () => useContext(MyContext);

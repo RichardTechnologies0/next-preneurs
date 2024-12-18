@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useMyContext } from './context/MyContext';
+import { useMyContext } from '@/context/MyContext';
 
 export default function LoginPage() {
  const {login}=useMyContext();

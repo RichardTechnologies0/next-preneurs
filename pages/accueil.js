@@ -4,7 +4,7 @@ import PostCard from "./postCard";
 import Footer from "./footer";
 import {useState,useEffect} from "react";
 import ProfilePage from "./profiles";
-import { useMyContext } from "./context/MyContext";
+import { useMyContext } from "@/context/MyContext";
 
 export default function Accueil(){
     const {email,setEmail}=useMyContext();
