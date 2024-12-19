@@ -20,7 +20,7 @@ function UserCard({email}){
    };
 
    useEffect(()=>{
-        axios.get('http://127.0.0.1:5000/api/friends')
+        axios.get('https://next-preneurs-api-python.onrender.com/api/friends')
         .then(response=>{
             setUser(response.data);
         })
