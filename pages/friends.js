@@ -16,7 +16,7 @@ function Friends({ email }) {
 
   const handleSuivi = async () => {
     try {
-      const response = await axios.post("http://127.0.0.1:5000/api/suivi", {
+      const response = await axios.post("https://next-preneurs-api-python.onrender.com/api/suivi", {
         email,
       });
       setUser(response.data); // Met à jour l'état avec les données reçues
