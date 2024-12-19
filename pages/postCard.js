@@ -7,7 +7,7 @@ function PostCard(){
   const [post,setPost]=useState([]);
 
   useEffect(()=>{
-          axios.get('http://127.0.0.1:5000/api/post')
+          axios.get('https://next-preneurs-api-python.onrender.com/api/post')
           .then(response=>{
             setPost(response.data);
           })
