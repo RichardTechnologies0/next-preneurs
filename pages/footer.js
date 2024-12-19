@@ -9,7 +9,7 @@ function Footer(){
                     <a className="hover:text-gray-300">Privacy Policy</a>
                 </div>
                 <p className="mt-4 text-sm">
-                &copy; {new Date().getFullYear()} Entrepreneur Social. All Rights Reserved.
+                &copy; {new Date().getFullYear()} Entrepreneur Social.<a href="https://richardtechnologies.com/" className="hover:text-gray-300">Richard Technologies</a>
                 </p>
             </div>
         </footer>
