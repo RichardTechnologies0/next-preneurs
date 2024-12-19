@@ -5,6 +5,7 @@ import Footer from "./footer";
 import {useState,useEffect} from "react";
 import ProfilePage from "./profiles";
 import { useMyContext } from "@/context/MyContext";
+import Friends from "./friends";
 
 export default function Accueil(){
     const {email,setEmail}=useMyContext();
@@ -51,6 +52,7 @@ export default function Accueil(){
           <h2 className="text-xl text-center text-white bg-blue-500 font-semibold">
            Projet ET Collaboration
           </h2>
+         <Friends email={email} />
         </div>
       </div>
   
