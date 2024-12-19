@@ -8,11 +8,11 @@ function Friends({ email }) {
   const [cookies, setCookies] = useCookies([]);
 
   useEffect(() => {
-    // Appel de la fonction lors du montage ou lorsque l'email change
+    
     if (email) {
       handleSuivi();
     }
-  }, [email]); // Effectue l'appel chaque fois que l'email change
+  }, [email]); 
 
   const handleSuivi = async () => {
     try {
@@ -28,10 +28,10 @@ function Friends({ email }) {
 
   return (
     <div className="container mx-auto p-4">
-      {Array.isArray(user) && user.length > 0 ? ( // Vérifie si 'user' est un tableau non vide
+      {Array.isArray(user) && user.length > 0 ? ( 
         user.map((item, index) => (
           <div
-            key={index} // Utilisation de l'index comme clé unique
+            key={index} 
             className="bg-white shadow-md rounded-lg p-8 w-80 mx-auto mb-8 flex items-center"
           >
             <img
@@ -51,11 +51,11 @@ function Friends({ email }) {
           </div>
         ))
       ) : (
-        // Affiche un message si aucun utilisateur n'est trouvé
+        
         <div className="container mx-auto items-center">
           <button 
             className="p-4 m-4 bg-blue-500 text-white items-center rounded-full"
-            onClick={() => handleSuivi()} // Appel de la fonction pour voir les collaborateurs
+            onClick={() => handleSuivi()}
           >
             Voir vos Collaborateurs
           </button>
