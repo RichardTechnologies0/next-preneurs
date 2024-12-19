@@ -26,22 +26,22 @@ return (
         <i className="fa fa-home"></i>
       </a>
 
-      {/* Lien vers les messages */}
+      
       <a href="./message" className="hover:text-gray-300">
         <i className="fa fa-envelope"></i>
       </a>
 
-      {/* Lien vers les notifications */}
+     
       <a href="./notification" className="hover:text-gray-300">
         <i className="fa fa-bell"></i> 
       </a>
 
-      {/* Lien vers la création de nouveaux posts */}
+      
       <a href="./newPost" className="hover:text-gray-300">
         <i className="fa fa-plus"></i>
       </a>
 
-      {/* Lien de déconnexion */}
+     
       <a href="/" className="hover:text-gray-300 flex items-center">
         <i className="fa fa-close mr-2"></i> 
       </a>
@@ -58,10 +58,24 @@ return (
           <div className="md:hidden bg-blue-700 py-4">
             <nav className="flex flex-col items-center space-y-4">
 
-              <a href="./" className="text-white">Home</a>
-              <a href="./newPost" className="text-white">New Posts</a>
+                 
+            <a href="./" className="hover:text-gray-300">
+        <i className="fa fa-home"></i>
+      </a>
+             <a href="./newPost" className="hover:text-gray-300">
+        <i className="fa fa-plus"></i>
+      </a>
+              <a href="./message" className="hover:text-gray-300">
+        <i className="fa fa-envelope"></i>
+      </a>
+             
+      <a href="./notification" className="hover:text-gray-300">
+        <i className="fa fa-bell"></i> 
+      </a>
               
-              <a href="/" className="text-white">Deconnexion</a>
+             <a href="/" className="hover:text-gray-300 flex items-center">
+        <i className="fa fa-close mr-2"></i> 
+      </a>
             </nav>
           </div>
          )}
