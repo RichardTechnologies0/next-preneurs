@@ -56,7 +56,7 @@ function UserCard({ email }) {
                 onClick={() => addFriends(item.email, item.nom, item.occupation, item.url)}
                 className="p-2 m-4 text-white bg-blue-500 rounded-full hover:text-green-500"
               >
-                <i className="fa fa-plus"></i> Ajouter comme ami
+                <i className="fa fa-plus"></i> Collaborer
               </button>
             </div>
           </div>
