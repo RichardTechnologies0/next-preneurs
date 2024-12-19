@@ -16,7 +16,7 @@ export default function NewPpost(){
         e.preventDefault();
        
        try{
-        const response=await axios.post("http://127.0.0.1:5000/api/send-post",{description,image_url:image,nom:nom,});
+        const response=await axios.post("https://next-preneurs-api-python.onrender.com/api/send-post",{description,image_url:image,nom:nom,});
         alert("Publication fait");
         setResponseMessage(response.data.message);
        }catch(error){
