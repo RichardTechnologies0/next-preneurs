@@ -37,7 +37,7 @@ export default function Signin(){
               <p className="bg-green font-semibold text-8 text-center">{responseMessage} </p>
             <div className="w-full">
                 <form onSubmit={handlePostCompte} className="bg-white shadow-lg space-y-4 flex flex-col p-6 mt-10 border border-gray-300 border-radius-10">
-                         <input type="text" className="w-full block m-4 p-4 border border-gray-200" placeholder="Jean maraino" value={nom} onChange={(e)=>setNom(e.target.value)} />
+                         <input type="text" className="w-full block m-4 p-4 border border-gray-200" placeholder="Jean Maraino" value={nom} onChange={(e)=>setNom(e.target.value)} />
                          <input type="text" className="w-full block m-4 p-4 border border-gray-200" placeholder="Profession,activite" value={occupation} onChange={(e)=>setOccupation(e.target.value)} />
                          <input type="text" className="w-full block m-4 p-4 border border-gray-200" placeholder="Url du profile" value={url} onChange={(e)=>setUrl(e.target.value)} />
                          <input type="email" className="w-full block m-4 p-4 border border-gray-200" placeholder="email@exemple.com" value={email} onChange={(e)=>setEmail(e.target.value)} />
