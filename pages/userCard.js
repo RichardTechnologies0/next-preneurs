@@ -25,7 +25,7 @@ function UserCard({ email }) {
   // Appel de l'API pour récupérer les utilisateurs au montage du composant
   useEffect(() => {
     axios
-      .get(https://next-preneurs-api-python.onrender.com/api/friends')
+      .get('https://next-preneurs-api-python.onrender.com/api/friends')
       .then((response) => {
         setUser(response.data); // Met à jour l'état avec les données des utilisateurs
       })
