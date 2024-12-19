@@ -8,7 +8,7 @@ function UserCard({email}){
    const [friends,setFriends]=useState('');
    const addFriends =async(key)=>{
         try{
-          const response = await axios.post('http://127.0.0.1:5000/api/add_friends', {
+          const response = await axios.post('https://next-preneurs-api-python.onrender.com/api/add_friends', {
             key: key, 
             email: {email}, 
           });
