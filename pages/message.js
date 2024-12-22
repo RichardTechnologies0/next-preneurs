@@ -1,32 +1,66 @@
 
-import React from 'react';
+import axios from "axios";
+import { useState } from "react";
 
-const MessagePage = () => {
-    const messages = [
-        { sender: 'Alice', content: 'Hello, how are you?', timestamp: '10:30 AM' },
-        { sender: 'Bob', content: 'Don’t forget the meeting at 3 PM.', timestamp: '9:15 AM' },
-      ];
+export default function ChatIA() {
+  const [idea, setIdea] = useState("");
+  const [responseAI, setResponseAI] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); 
+    setLoading(true); 
+    setResponseAI(""); 
+
+    try {
+      const response = await axios.post("https://next-preneurs-api-python.onrender.com/api/chatAI", {
+        idea,
+      });
+      setResponseAI(response.data.prediction); 
+    } catch (error) {
+      console.error("Erreur de système", error);
+      setResponseAI("Une erreur est survenue. Veuillez réessayer.");
+    } finally {
+      setLoading(false); 
+    }
+  };
+
   return (
-    <div className="p-6 mx-auto lg:flex-row  items-center justify-center flex flex-cols  max-w-4x1 mt-10">
-      <div className='container'>
-      <h1 className="text-xl font-semibold mb-4 text-blue-500">Messages</h1>
-      </div>
-      <div className="space-y-4">
-        {messages.map((message, index) => (
-          <div
-            key={index}
-            className="bg-white shadow-md p-4 rounded-md hover:shadow-lg transition-all"
-          >
-            <h2 className="text-lg font-medium text-gray-800">
-              {message.sender}
-            </h2>
-            <p className="text-gray-600">{message.content}</p>
-            <span className="text-sm text-gray-400">{message.timestamp}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
 
-export default MessagePage;
+     <>
+      <div className="w-50 sm:m-20 container mx-auto mx-4">
+        <div className="bg-white shadow-md p-4 rounded-md hover:shadow-lg transition-all">
+          <h2 className="text-lg font-medium text-gray-800">
+            NEXT-PRENEUR AI
+          </h2>
+          {/* Affiche un indicateur de chargement ou la réponse générée */}
+          {loading ? (
+            <p className="text-gray-600">ChatIA</p>
+          ) : (
+            <p className="text-gray-600">
+              {responseAI || "Aucune réponse pour le moment."}
+            </p>
+          )}
+        </div>
+      </div>
+
+      <div className="w-50 sm:m-10 container mx-auto mx-4">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Entrez votre idée ici..."
+            value={idea}
+            onChange={(e) => setIdea(e.target.value)}
+            className="border border-gray-300 p-2 rounded-md w-full"
+          />
+          <button
+            type="submit"
+            className="p-4 mt-4 bg-blue-500 hover:bg-blue-700 text-white rounded-xl"
+          >
+            PREDICTION
+          </button>
+        </form>
+      </div>
+      </>
+  );
+}
