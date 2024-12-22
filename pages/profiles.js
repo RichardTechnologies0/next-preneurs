@@ -71,6 +71,7 @@ export default function ProfilePage() {
                <a className='text-blue-500 hover:text-green-700 font-bold ' href='#'>Etudes de cas</a>
                <a className='text-blue-500 hover:text-green-700 font-bold mx-auto' href='#'>Certifications</a>
                <a className='text-blue-500 hover:text-green-700 font-bold ' href='#'>Evenements / Webinaires</a>
+                <a className='text-blue-500 hover:text-green-700 font-bold ml-lg' href='./message'>ChatIA</a>
                <a href="./newPost" className="hover:text-gray-300 rounded-full border outline outline-offset-2 text-blue-500 m-2 p-2 border-blue-500">
              <i className="fa fa-plus"></i>Add Post
            </a>
