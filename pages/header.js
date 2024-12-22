@@ -26,7 +26,7 @@ return (
         <i className="fa fa-home"></i>
       </a>
 
-      {/* Lien vers les messages */}
+      
       <a href="./message" className="hover:text-gray-300">
         <i className="fa fa-envelope"></i>
       </a>
@@ -60,17 +60,17 @@ return (
         <i className="fa fa-home"></i>
       </a>
 
-      {/* Lien vers les messages */}
+     
       <a href="./message" className="hover:text-gray-300">
         <i className="fa fa-envelope"></i>
       </a>
 
-      {/* Lien vers les notifications */}
+      
       <a href="./notification" className="hover:text-gray-300">
         <i className="fa fa-bell"></i> 
       </a>
 
-      {/* Lien vers la création de nouveaux posts */}
+      
       <a href="./newPost" className="hover:text-gray-300">
         <i className="fa fa-plus"></i>
       </a>
